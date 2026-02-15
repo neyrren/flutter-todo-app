@@ -11,20 +11,47 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:todo_app/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
+  testWidgets('App shows empty state initially', (WidgetTester tester) async {
     await tester.pumpWidget(const MyApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    expect(find.text('My Todos'), findsOneWidget);
+    expect(find.text('No todos yet!'), findsOneWidget);
+    expect(find.byIcon(Icons.add), findsOneWidget);
+  });
 
-    // Tap the '+' icon and trigger a frame.
+  testWidgets('Can add a todo', (WidgetTester tester) async {
+    await tester.pumpWidget(const MyApp());
+
+    // Tap FAB to open add sheet
     await tester.tap(find.byIcon(Icons.add));
+    await tester.pumpAndSettle();
+
+    // Type a todo
+    await tester.enterText(find.byType(TextField), 'Buy groceries');
+    await tester.testTextInput.receiveAction(TextInputAction.done);
+    await tester.pumpAndSettle();
+
+    // Verify the todo appears
+    expect(find.text('Buy groceries'), findsOneWidget);
+    expect(find.text('No todos yet!'), findsNothing);
+  });
+
+  testWidgets('Can toggle a todo', (WidgetTester tester) async {
+    await tester.pumpWidget(const MyApp());
+
+    // Add a todo
+    await tester.tap(find.byIcon(Icons.add));
+    await tester.pumpAndSettle();
+    await tester.enterText(find.byType(TextField), 'Test todo');
+    await tester.testTextInput.receiveAction(TextInputAction.done);
+    await tester.pumpAndSettle();
+
+    // Toggle the checkbox
+    await tester.tap(find.byType(Checkbox));
     await tester.pump();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verify it's checked
+    final checkbox = tester.widget<Checkbox>(find.byType(Checkbox));
+    expect(checkbox.value, isTrue);
   });
 }
