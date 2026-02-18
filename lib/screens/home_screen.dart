@@ -114,24 +114,51 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('TaskMaster Pro'),
+        title: const Text(
+          '📋 My To-Do List',
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+        backgroundColor: Colors.blue,
+        elevation: 4,
+        centerTitle: true,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 16.0),
+            child: CircleAvatar(
+              backgroundColor: Colors.white,
+              child: Text(
+                '${_tasks.length}',
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue,
+                ),
+              ),
+            ),
+          ),
+        ],
         bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(60),
+          preferredSize: const Size.fromHeight(50),
           child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            color: Colors.blue.shade700,
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: _filters.map((filter) {
-                return FilterChip(
-                  label: Text(filter),
-                  selected: _selectedFilter == filter,
-                  onSelected: (selected) {
-                    setState(() => _selectedFilter = filter);
-                  },
-                  backgroundColor: Colors.grey[200],
-                  selectedColor: Colors.blue,
-                  labelStyle: TextStyle(
-                    color: _selectedFilter == filter ? Colors.white : Colors.black,
+                return TextButton(
+                  onPressed: () => setState(() => _selectedFilter = filter),
+                  child: Text(
+                    filter,
+                    style: TextStyle(
+                      color: _selectedFilter == filter 
+                          ? Colors.white 
+                          : Colors.white70,
+                      fontWeight: _selectedFilter == filter 
+                          ? FontWeight.bold 
+                          : FontWeight.normal,
+                    ),
                   ),
                 );
               }).toList(),
@@ -169,6 +196,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         label: const Text('Add Task'),
         icon: const Icon(Icons.add),
+        backgroundColor: Colors.blue,
       ),
     );
   }
