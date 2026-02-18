@@ -47,18 +47,23 @@ A simple and elegant To-Do List application built with Flutter that allows users
 ###  Steps to Run
 
 1. Clone the repository
+   
 git clone https://github.com/neyrren/flutter-todo-app.git
 
 cd flutter-todo-app
 
 2. Install dependencies
+   
 flutter pub get
 
-3. Check Flutter setup
+4. Check Flutter setup
+   
 flutter doctor
 
-4. Start emulator or connect phone
+6. Start emulator or connect phone
+   
 flutter devices
 
-5. Run the app
+8. Run the app
+   
 flutter run
