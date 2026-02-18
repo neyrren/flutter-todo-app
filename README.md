@@ -25,16 +25,16 @@ A simple and elegant To-Do List application built with Flutter that allows users
 ## Screenshots
 
 ### Main Screen
-![Main Screen](assets/screenshots/main_screen.jpeg)
+![Main Screen](lib/assets/screenshots/main_screen.jpeg)
 
 ### Adding a Task
-![Add Task](assets/screenshots/add_task.jpeg)
+![Add Task](lib/assets/screenshots/add_task.jpeg)
 
 ### Completing a Task
-![Complete Task](assets/screenshots/completed_task.jpeg)
+![Complete Task](lib/assets/screenshots/completed_task.jpeg)
 
 ### Deleting a Task
-![Delete Task](assets/screenshots/deleting_task.jpeg)
+![Delete Task](lib/assets/screenshots/deleting_task.jpeg)
 
 ##  How to Run the App
 
