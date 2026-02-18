@@ -8,8 +8,8 @@ A simple and elegant To-Do List application built with Flutter that allows users
 -  View tasks in a scrollable list
 -  Mark tasks as complete/incomplete
 -  Delete tasks
--  Local data persistence using SQLite
--  Clean and intuitive user interface
+-  Local data persistence after app closure
+
 
 ## Group Members
 
@@ -25,26 +25,40 @@ A simple and elegant To-Do List application built with Flutter that allows users
 ## Screenshots
 
 ### Main Screen
-![Main Screen](assets/screenshots/main_screen.png)
+![Main Screen](assets/screenshots/main_screen.jpeg)
 
 ### Adding a Task
-![Add Task](assets/screenshots/add_task.png)
+![Add Task](assets/screenshots/add_task.jpeg)
 
 ### Completing a Task
-![Complete Task](assets/screenshots/complete_task.png)
+![Complete Task](assets/screenshots/completed_task.jpeg)
 
 ### Deleting a Task
-![Delete Task](assets/screenshots/delete_task.png)
+![Delete Task](assets/screenshots/deleting_task.jpeg)
 
-## How to Run the App
+##  How to Run the App
 
-### Prerequisites
+###  Prerequisites
 - Flutter SDK (version 2.19.0 or higher)
-- Android Studio / VS Code with Flutter extensions
+- Android Studio or VS Code with Flutter extensions
 - Git
+- Android Emulator or Real Phone
 
-### Steps to Run
+###  Steps to Run
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/flutter-todo-app.git
+1. Clone the repository
+git clone https://github.com/neyrren/flutter-todo-app.git
+
+cd flutter-todo-app
+
+2. Install dependencies
+flutter pub get
+
+3. Check Flutter setup
+flutter doctor
+
+4. Start emulator or connect phone
+flutter devices
+
+5. Run the app
+flutter run
