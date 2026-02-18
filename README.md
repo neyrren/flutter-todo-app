@@ -31,7 +31,7 @@ A simple and elegant To-Do List application built with Flutter that allows users
 <img src="lib/assets/screenshots/add_task.jpeg" width="250" alt="Add Task">
 
 ### Completing a Task
-<img src="lib/assets/screenshots/completed_task.jpeg" width="250" alt="Complete Task">
+<img src="lib/assets/screenshots/completed_tasks.jpeg" width="250" alt="Complete Task">
 
 ### Deleting a Task
 <img src="lib/assets/screenshots/deleting_task.jpeg" width="250" alt="Delete Task">
