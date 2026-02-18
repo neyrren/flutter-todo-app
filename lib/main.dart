@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  const MaterialApp(
-      title: 'TaskMaster Pro',
+      title: 'To-Do List',
       debugShowCheckedModeBanner: false,
 
       home: HomeScreen(),
