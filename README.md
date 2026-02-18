@@ -13,14 +13,14 @@ A simple and elegant To-Do List application built with Flutter that allows users
 
 ## Group Members
 
-| S/N | Name | Registration Number | Signature |
-|-----|------|-------------------|-----------|
-| 1 | HAGAI JOHN MKAWE | 30831/T.2023 | |
-| 2 | BRITNEY BROWN NORMAN | 30297/T.2023 | |
-| 3 | EDMUND WILLIAM RWEGASIRA | 31239/T.2023 | |
-| 4 | REAGAN CHARLES REUBEN | 30489/T.2023 | |
-| 5 | FARIJALA YAHAYA SAMBAYA | 31148/T.2023 | |
-| 6 | MESHACK YUSUPH MPENDA | 32001/T.2023 | |
+| S/N | Name | Registration Number |
+|-----|------|-------------------|
+| 1 | HAGAI JOHN MKAWE | 30831/T.2023 | 
+| 2 | BRITNEY BROWN NORMAN | 30297/T.2023 | 
+| 3 | EDMUND WILLIAM RWEGASIRA | 31239/T.2023 | 
+| 4 | REAGAN CHARLES REUBEN | 30489/T.2023 | 
+| 5 | FARIJALA YAHAYA SAMBAYA | 31148/T.2023 | 
+| 6 | MESHACK YUSUPH MPENDA | 32001/T.2023 | 
 
 ## Screenshots
 
